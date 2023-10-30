@@ -1,3 +1,4 @@
+""" ChatBot project """
 print("Hello! My name is Alex\nI was created in 2023")
 name = input("Please, remind me your name.\n")
 print("What a great name you have, " + name + "!")
@@ -20,8 +21,8 @@ for n in range(number + 1):
 print("Completed, have a nice day!")
 print("Let's test your programming knowledge.")
 print("What is an 'IDE' in programming?")
-print("1. Integrated Development Environment\n2. Internet Data Exchange\n3. Instructional Design Environment\n4. "
-      "Intelligent Debugging Engine")
+print("1. Integrated Development Environment\n2. Internet Data Exchange")
+print("3. Instructional Design Environment\n4. ""Intelligent Debugging Engine")
 answer = int(input())
 while answer != 1:
     print("Please, try again.")
