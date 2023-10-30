@@ -1,4 +1,6 @@
-print("I love animals!\nLet's check out the animals...\nThe deer looks fine.\nThe lion looks healthy.")
+"""The Zoo project"""
+print("I love animals!\nLet's check out the animals...")
+print("The deer looks fine.\nThe lion looks healthy.")
 camel = r"""
 The camel habitat...
  ___.-''''-.
@@ -111,6 +113,10 @@ rabbit = r"""
 animals = [camel, lion, deer, goose, bat, rabbit]
 number = input("Please enter the number of the habitat you would like to view:")
 while number != "exit":
-    print(animals[int(number)])
-    number = input("Please enter the number of the habitat you would like to view:")
+    if 1 <= int(number) <= len(animals):
+        print(animals[int(number) - 1])
+        number = int(input("Please enter the number of the habitat you would like to view:"))
+    else:
+        print("Please enter the correct number or type 'exit' to quit.")
+        number = input("Please enter the number of the habitat you would like to view:")
 print("See you later!")
