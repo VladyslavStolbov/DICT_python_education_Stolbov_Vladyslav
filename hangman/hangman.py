@@ -15,10 +15,14 @@ while attempts < MAX_ATTEMPTS:
     print("".join(display_word))
     letter = input("Input a letter:")
 
-    if letter in word_to_guess and letter not in display_word:
-        for i in range(len(word_to_guess)):
-            if letter in word_to_guess[i]:
-                display_word[i] = letter
+    if letter in word_to_guess:
+        if letter not in display_word:
+            for i in range(len(word_to_guess)):
+                if letter in word_to_guess[i]:
+                    display_word[i] = letter
+        else:
+            print("No improvements")
+            attempts += 1
     else:
         print("That letter doesn't appear in the word")
         attempts += 1
